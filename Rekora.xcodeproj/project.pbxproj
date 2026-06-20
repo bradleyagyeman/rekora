@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A2B3C4D5E6F700000000001 /* RekoraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000011 /* RekoraApp.swift */; };
+		1A2B3C4D5E6F700000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000012 /* ContentView.swift */; };
+		1A2B3C4D5E6F700000000003 /* AppCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000013 /* AppCopy.swift */; };
+		1A2B3C4D5E6F700000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000014 /* Assets.xcassets */; };
+		1A2B3C4D5E6F700000000005 /* RekoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000015 /* RekoraTests.swift */; };
+		1A2B3C4D5E6F700000000037 /* BackupSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000038 /* BackupSnapshot.swift */; };
+		1A2B3C4D5E6F700000000039 /* BackupSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000040 /* BackupSnapshotTests.swift */; };
+		1A2B3C4D5E6F700000000041 /* SampleSnapshotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000042 /* SampleSnapshotFactory.swift */; };
+		1A2B3C4D5E6F700000000043 /* SnapshotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000044 /* SnapshotStore.swift */; };
+		1A2B3C4D5E6F700000000045 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000046 /* AppTheme.swift */; };
+		1A2B3C4D5E6F700000000047 /* SnapshotStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000048 /* SnapshotStoreTests.swift */; };
+		1A2B3C4D5E6F700000000049 /* MusicPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000050 /* MusicPermission.swift */; };
+		1A2B3C4D5E6F700000000051 /* MusicPermissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000052 /* MusicPermissionTests.swift */; };
+		1A2B3C4D5E6F700000000053 /* PlaylistLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000054 /* PlaylistLibrary.swift */; };
+		1A2B3C4D5E6F700000000055 /* PlaylistLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000056 /* PlaylistLibraryTests.swift */; };
+		1A2B3C4D5E6F700000000057 /* AppleMusicBackupSnapshotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000058 /* AppleMusicBackupSnapshotFactory.swift */; };
+		1A2B3C4D5E6F700000000059 /* RekoraBackupDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000060 /* RekoraBackupDocument.swift */; };
+		1A2B3C4D5E6F700000000061 /* LibraryProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000062 /* LibraryProbe.swift */; };
+		1A2B3C4D5E6F700000000063 /* LibraryProbeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000064 /* LibraryProbeTests.swift */; };
+		1A2B3C4D5E6F700000000065 /* StartupBranding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000066 /* StartupBranding.swift */; };
+		1A2B3C4D5E6F700000000067 /* BackupImportValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000068 /* BackupImportValidator.swift */; };
+		1A2B3C4D5E6F700000000069 /* SnapshotDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000070 /* SnapshotDiff.swift */; };
+		1A2B3C4D5E6F700000000071 /* SnapshotDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000072 /* SnapshotDiffTests.swift */; };
+		1A2B3C4D5E6F700000000073 /* RebuildPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000074 /* RebuildPlan.swift */; };
+		1A2B3C4D5E6F700000000075 /* RebuildPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000076 /* RebuildPlanTests.swift */; };
+		1A2B3C4D5E6F700000000077 /* LiveMusicMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000078 /* LiveMusicMatching.swift */; };
+		1A2B3C4D5E6F700000000079 /* RestorePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000080 /* RestorePreviewViewModel.swift */; };
+		1A2B3C4D5E6F700000000081 /* LiveMusicMatchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000082 /* LiveMusicMatchingTests.swift */; };
+		1A2B3C4D5E6F700000000083 /* RestorePreviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000084 /* RestorePreviewViewModelTests.swift */; };
+		1A2B3C4D5E6F700000000085 /* PlaylistRebuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000086 /* PlaylistRebuild.swift */; };
+		1A2B3C4D5E6F700000000087 /* PlaylistRebuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F700000000088 /* PlaylistRebuildTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A2B3C4D5E6F700000000006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A2B3C4D5E6F700000000007 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A2B3C4D5E6F700000000008;
+			remoteInfo = Rekora;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A2B3C4D5E6F700000000009 /* Rekora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rekora.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2B3C4D5E6F700000000010 /* RekoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RekoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2B3C4D5E6F700000000011 /* RekoraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekoraApp.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000013 /* AppCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCopy.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000015 /* RekoraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekoraTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000038 /* BackupSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupSnapshot.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000040 /* BackupSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupSnapshotTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000042 /* SampleSnapshotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSnapshotFactory.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000044 /* SnapshotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotStore.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000046 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000048 /* SnapshotStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotStoreTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000050 /* MusicPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPermission.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000052 /* MusicPermissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPermissionTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000054 /* PlaylistLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistLibrary.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000056 /* PlaylistLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistLibraryTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000058 /* AppleMusicBackupSnapshotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicBackupSnapshotFactory.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000060 /* RekoraBackupDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekoraBackupDocument.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000062 /* LibraryProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryProbe.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000064 /* LibraryProbeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryProbeTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000066 /* StartupBranding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupBranding.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000068 /* BackupImportValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupImportValidator.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000070 /* SnapshotDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotDiff.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000072 /* SnapshotDiffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotDiffTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000074 /* RebuildPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebuildPlan.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000076 /* RebuildPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebuildPlanTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000078 /* LiveMusicMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMusicMatching.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000080 /* RestorePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePreviewViewModel.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000082 /* LiveMusicMatchingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMusicMatchingTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000084 /* RestorePreviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePreviewViewModelTests.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000086 /* PlaylistRebuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRebuild.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F700000000088 /* PlaylistRebuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRebuildTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A2B3C4D5E6F700000000016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A2B3C4D5E6F700000000017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A2B3C4D5E6F700000000018 = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F700000000019 /* Rekora */,
+				1A2B3C4D5E6F700000000020 /* RekoraTests */,
+				1A2B3C4D5E6F700000000021 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F700000000019 /* Rekora */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F700000000011 /* RekoraApp.swift */,
+				1A2B3C4D5E6F700000000012 /* ContentView.swift */,
+				1A2B3C4D5E6F700000000013 /* AppCopy.swift */,
+				1A2B3C4D5E6F700000000038 /* BackupSnapshot.swift */,
+				1A2B3C4D5E6F700000000074 /* RebuildPlan.swift */,
+				1A2B3C4D5E6F700000000078 /* LiveMusicMatching.swift */,
+				1A2B3C4D5E6F700000000080 /* RestorePreviewViewModel.swift */,
+				1A2B3C4D5E6F700000000086 /* PlaylistRebuild.swift */,
+				1A2B3C4D5E6F700000000070 /* SnapshotDiff.swift */,
+				1A2B3C4D5E6F700000000058 /* AppleMusicBackupSnapshotFactory.swift */,
+				1A2B3C4D5E6F700000000042 /* SampleSnapshotFactory.swift */,
+				1A2B3C4D5E6F700000000044 /* SnapshotStore.swift */,
+				1A2B3C4D5E6F700000000060 /* RekoraBackupDocument.swift */,
+				1A2B3C4D5E6F700000000068 /* BackupImportValidator.swift */,
+				1A2B3C4D5E6F700000000050 /* MusicPermission.swift */,
+				1A2B3C4D5E6F700000000054 /* PlaylistLibrary.swift */,
+				1A2B3C4D5E6F700000000062 /* LibraryProbe.swift */,
+				1A2B3C4D5E6F700000000046 /* AppTheme.swift */,
+				1A2B3C4D5E6F700000000066 /* StartupBranding.swift */,
+				1A2B3C4D5E6F700000000014 /* Assets.xcassets */,
+			);
+			path = Rekora;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F700000000020 /* RekoraTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F700000000015 /* RekoraTests.swift */,
+				1A2B3C4D5E6F700000000040 /* BackupSnapshotTests.swift */,
+				1A2B3C4D5E6F700000000076 /* RebuildPlanTests.swift */,
+				1A2B3C4D5E6F700000000082 /* LiveMusicMatchingTests.swift */,
+				1A2B3C4D5E6F700000000084 /* RestorePreviewViewModelTests.swift */,
+				1A2B3C4D5E6F700000000088 /* PlaylistRebuildTests.swift */,
+				1A2B3C4D5E6F700000000072 /* SnapshotDiffTests.swift */,
+				1A2B3C4D5E6F700000000048 /* SnapshotStoreTests.swift */,
+				1A2B3C4D5E6F700000000052 /* MusicPermissionTests.swift */,
+				1A2B3C4D5E6F700000000056 /* PlaylistLibraryTests.swift */,
+				1A2B3C4D5E6F700000000064 /* LibraryProbeTests.swift */,
+			);
+			path = RekoraTests;
+			sourceTree = "<group>";
+		};
+		1A2B3C4D5E6F700000000021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B3C4D5E6F700000000009 /* Rekora.app */,
+				1A2B3C4D5E6F700000000010 /* RekoraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A2B3C4D5E6F700000000008 /* Rekora */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A2B3C4D5E6F700000000022 /* Build configuration list for PBXNativeTarget "Rekora" */;
+			buildPhases = (
+				1A2B3C4D5E6F700000000023 /* Sources */,
+				1A2B3C4D5E6F700000000016 /* Frameworks */,
+				1A2B3C4D5E6F700000000024 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rekora;
+			productName = Rekora;
+			productReference = 1A2B3C4D5E6F700000000009 /* Rekora.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A2B3C4D5E6F700000000025 /* RekoraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A2B3C4D5E6F700000000026 /* Build configuration list for PBXNativeTarget "RekoraTests" */;
+			buildPhases = (
+				1A2B3C4D5E6F700000000027 /* Sources */,
+				1A2B3C4D5E6F700000000017 /* Frameworks */,
+				1A2B3C4D5E6F700000000028 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A2B3C4D5E6F700000000029 /* PBXTargetDependency */,
+			);
+			name = RekoraTests;
+			productName = RekoraTests;
+			productReference = 1A2B3C4D5E6F700000000010 /* RekoraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A2B3C4D5E6F700000000007 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					1A2B3C4D5E6F700000000008 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					1A2B3C4D5E6F700000000025 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 1A2B3C4D5E6F700000000008;
+					};
+				};
+			};
+			buildConfigurationList = 1A2B3C4D5E6F700000000030 /* Build configuration list for PBXProject "Rekora" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A2B3C4D5E6F700000000018;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1A2B3C4D5E6F700000000021 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A2B3C4D5E6F700000000008 /* Rekora */,
+				1A2B3C4D5E6F700000000025 /* RekoraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A2B3C4D5E6F700000000024 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2B3C4D5E6F700000000004 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A2B3C4D5E6F700000000028 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A2B3C4D5E6F700000000023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2B3C4D5E6F700000000001 /* RekoraApp.swift in Sources */,
+				1A2B3C4D5E6F700000000002 /* ContentView.swift in Sources */,
+				1A2B3C4D5E6F700000000003 /* AppCopy.swift in Sources */,
+				1A2B3C4D5E6F700000000037 /* BackupSnapshot.swift in Sources */,
+				1A2B3C4D5E6F700000000073 /* RebuildPlan.swift in Sources */,
+				1A2B3C4D5E6F700000000077 /* LiveMusicMatching.swift in Sources */,
+				1A2B3C4D5E6F700000000079 /* RestorePreviewViewModel.swift in Sources */,
+				1A2B3C4D5E6F700000000085 /* PlaylistRebuild.swift in Sources */,
+				1A2B3C4D5E6F700000000069 /* SnapshotDiff.swift in Sources */,
+				1A2B3C4D5E6F700000000057 /* AppleMusicBackupSnapshotFactory.swift in Sources */,
+				1A2B3C4D5E6F700000000041 /* SampleSnapshotFactory.swift in Sources */,
+				1A2B3C4D5E6F700000000043 /* SnapshotStore.swift in Sources */,
+				1A2B3C4D5E6F700000000059 /* RekoraBackupDocument.swift in Sources */,
+				1A2B3C4D5E6F700000000067 /* BackupImportValidator.swift in Sources */,
+				1A2B3C4D5E6F700000000049 /* MusicPermission.swift in Sources */,
+				1A2B3C4D5E6F700000000053 /* PlaylistLibrary.swift in Sources */,
+				1A2B3C4D5E6F700000000061 /* LibraryProbe.swift in Sources */,
+				1A2B3C4D5E6F700000000045 /* AppTheme.swift in Sources */,
+				1A2B3C4D5E6F700000000065 /* StartupBranding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A2B3C4D5E6F700000000027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2B3C4D5E6F700000000005 /* RekoraTests.swift in Sources */,
+				1A2B3C4D5E6F700000000039 /* BackupSnapshotTests.swift in Sources */,
+				1A2B3C4D5E6F700000000075 /* RebuildPlanTests.swift in Sources */,
+				1A2B3C4D5E6F700000000081 /* LiveMusicMatchingTests.swift in Sources */,
+				1A2B3C4D5E6F700000000083 /* RestorePreviewViewModelTests.swift in Sources */,
+				1A2B3C4D5E6F700000000087 /* PlaylistRebuildTests.swift in Sources */,
+				1A2B3C4D5E6F700000000071 /* SnapshotDiffTests.swift in Sources */,
+				1A2B3C4D5E6F700000000047 /* SnapshotStoreTests.swift in Sources */,
+				1A2B3C4D5E6F700000000051 /* MusicPermissionTests.swift in Sources */,
+				1A2B3C4D5E6F700000000055 /* PlaylistLibraryTests.swift in Sources */,
+				1A2B3C4D5E6F700000000063 /* LibraryProbeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A2B3C4D5E6F700000000029 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A2B3C4D5E6F700000000008 /* Rekora */;
+			targetProxy = 1A2B3C4D5E6F700000000006 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A2B3C4D5E6F700000000031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A2B3C4D5E6F700000000032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A2B3C4D5E6F700000000033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = M4X655ZA37;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Rekora;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Rekora needs access to your Apple Music library so it can back up your songs, albums, and playlists.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rekora.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1A2B3C4D5E6F700000000034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = M4X655ZA37;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Rekora;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Rekora needs access to your Apple Music library so it can back up your songs, albums, and playlists.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rekora.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1A2B3C4D5E6F700000000035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rekora.ios.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rekora.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rekora";
+			};
+			name = Debug;
+		};
+		1A2B3C4D5E6F700000000036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rekora.ios.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rekora.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rekora";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A2B3C4D5E6F700000000022 /* Build configuration list for PBXNativeTarget "Rekora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2B3C4D5E6F700000000033 /* Debug */,
+				1A2B3C4D5E6F700000000034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A2B3C4D5E6F700000000026 /* Build configuration list for PBXNativeTarget "RekoraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2B3C4D5E6F700000000035 /* Debug */,
+				1A2B3C4D5E6F700000000036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A2B3C4D5E6F700000000030 /* Build configuration list for PBXProject "Rekora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2B3C4D5E6F700000000031 /* Debug */,
+				1A2B3C4D5E6F700000000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A2B3C4D5E6F700000000007 /* Project object */;
+}

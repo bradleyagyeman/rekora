@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rekora Project Brief</title>
+    <meta
+      name="description"
+      content="A local-first Apple Music backup project brief for Rekora."
+    >
+    <style>
+      :root {
+        --ink: #0d2b52;
+        --paper: #fff7f4;
+        --shell: #ffcfc4;
+        --mint: #b5ffc2;
+        --berry: #9e194d;
+        --line: rgba(13, 43, 82, 0.18);
+        --soft-line: rgba(13, 43, 82, 0.1);
+        --muted: rgba(13, 43, 82, 0.72);
+        --white: #ffffff;
+        --shadow: 0 24px 80px rgba(13, 43, 82, 0.12);
+        --radius: 8px;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(13, 43, 82, 0.035) 1px, transparent 1px),
+          linear-gradient(rgba(13, 43, 82, 0.035) 1px, transparent 1px),
+          var(--paper);
+        background-size: 44px 44px;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: rgba(158, 25, 77, 0.45);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover {
+        text-decoration-color: var(--berry);
+      }
+
+      .page {
+        overflow: hidden;
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        min-height: 92svh;
+        display: grid;
+        align-items: center;
+        padding: 42px 0 32px;
+        background:
+          linear-gradient(112deg, transparent 0 55%, rgba(181, 255, 194, 0.58) 55% 70%, transparent 70%),
+          linear-gradient(172deg, rgba(255, 207, 196, 0.66) 0 12%, transparent 12% 100%);
+      }
+
+      .topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 80px;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .mark {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background:
+          linear-gradient(90deg, transparent 43%, var(--ink) 43% 57%, transparent 57%),
+          linear-gradient(var(--mint), var(--shell));
+        box-shadow: 6px 6px 0 var(--berry);
+      }
+
+      .doc-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px;
+      }
+
+      .doc-links a {
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 2px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 48px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: var(--berry);
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 24px;
+        font-size: 7rem;
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 690px;
+        margin-bottom: 28px;
+        font-size: 1.55rem;
+        line-height: 1.35;
+        color: rgba(13, 43, 82, 0.84);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 16px;
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: var(--ink);
+        color: var(--white);
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 5px 5px 0 var(--shell);
+      }
+
+      .button.secondary {
+        background: var(--white);
+        color: var(--ink);
+        box-shadow: 5px 5px 0 var(--mint);
+      }
+
+      .status-board {
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .board-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+        border-bottom: 2px solid var(--ink);
+        background: var(--shell);
+        font-weight: 900;
+      }
+
+      .board-body {
+        padding: 18px;
+      }
+
+      .signal {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--soft-line);
+      }
+
+      .signal:last-child {
+        border-bottom: 0;
+      }
+
+      .dot {
+        width: 22px;
+        height: 22px;
+        margin-top: 3px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--mint);
+      }
+
+      .dot.pending {
+        background: var(--shell);
+      }
+
+      .dot.future {
+        background: transparent;
+      }
+
+      .signal strong {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .signal span {
+        color: var(--muted);
+      }
+
+      section {
+        padding: 88px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 34px;
+        align-items: start;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-size: 3.45rem;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .section-head p,
+      .wide-copy {
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .stripe {
+        background:
+          linear-gradient(90deg, rgba(255, 207, 196, 0.46), transparent 44%),
+          var(--white);
+        border-block: 1px solid var(--line);
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: var(--white);
+        overflow: hidden;
+      }
+
+      .proof {
+        min-height: 190px;
+        padding: 22px;
+        border-right: 1px solid var(--line);
+      }
+
+      .proof:last-child {
+        border-right: 0;
+      }
+
+      .proof b {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 2.25rem;
+        line-height: 1;
+        color: var(--berry);
+      }
+
+      .proof h3 {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+      }
+
+      .proof p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .step {
+        min-height: 210px;
+        padding: 18px;
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: var(--white);
+        box-shadow: 6px 6px 0 rgba(181, 255, 194, 0.72);
+      }
+
+      .step:nth-child(even) {
+        transform: translateY(22px);
+        box-shadow: 6px 6px 0 rgba(255, 207, 196, 0.78);
+      }
+
+      .step-num {
+        display: inline-grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 28px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--white);
+        font-weight: 900;
+      }
+
+      .step h3 {
+        margin-bottom: 8px;
+        font-size: 1rem;
+      }
+
+      .step p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 34px;
+        align-items: stretch;
+      }
+
+      .panel {
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .panel-title {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+        border-bottom: 2px solid var(--ink);
+        background: var(--mint);
+        font-weight: 900;
+      }
+
+      .panel-content {
+        padding: 22px;
+      }
+
+      .schema-list,
+      .plain-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .schema-list li,
+      .plain-list li {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 14px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--soft-line);
+      }
+
+      .schema-list li:last-child,
+      .plain-list li:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      code,
+      .mono {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace,
+          monospace;
+        font-size: 0.94em;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        min-height: 28px;
+        padding: 3px 9px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 207, 196, 0.36);
+        font-weight: 800;
+      }
+
+      .code-block {
+        display: block;
+        overflow-x: auto;
+        padding: 18px;
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: #071f3e;
+        color: #fff7f4;
+        line-height: 1.65;
+      }
+
+      .truth-table {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .truth {
+        min-height: 230px;
+        padding: 20px;
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: var(--white);
+      }
+
+      .truth h3 {
+        margin-bottom: 14px;
+        font-size: 1.2rem;
+      }
+
+      .truth ul {
+        margin: 0;
+        padding-left: 19px;
+        color: var(--muted);
+      }
+
+      .truth li + li {
+        margin-top: 8px;
+      }
+
+      .callout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 20px;
+        align-items: center;
+        padding: 28px;
+        border: 2px solid var(--ink);
+        border-radius: var(--radius);
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .callout p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .callout a {
+        color: var(--white);
+        text-decoration-color: var(--mint);
+      }
+
+      .footer {
+        padding: 44px 0;
+        color: var(--muted);
+      }
+
+      @media (max-width: 940px) {
+        .hero-grid,
+        .section-head,
+        .split,
+        .callout {
+          grid-template-columns: 1fr;
+        }
+
+        .proof-grid,
+        .truth-table {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .flow {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .step:nth-child(even) {
+          transform: none;
+        }
+
+        h1 {
+          font-size: 4.8rem;
+        }
+
+        h2 {
+          font-size: 2.75rem;
+        }
+
+        .lead {
+          font-size: 1.32rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .wrap {
+          width: min(100% - 28px, 1120px);
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 26px 0 56px;
+        }
+
+        .topline {
+          align-items: flex-start;
+          flex-direction: column;
+          margin-bottom: 52px;
+        }
+
+        .doc-links {
+          justify-content: flex-start;
+        }
+
+        h1 {
+          font-size: 3.35rem;
+        }
+
+        h2 {
+          font-size: 2.25rem;
+        }
+
+        .lead {
+          font-size: 1.18rem;
+        }
+
+        section {
+          padding: 62px 0;
+        }
+
+        .proof-grid,
+        .flow,
+        .truth-table {
+          grid-template-columns: 1fr;
+        }
+
+        .proof {
+          min-height: auto;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .proof:last-child {
+          border-bottom: 0;
+        }
+
+        .schema-list li,
+        .plain-list li {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
+        .button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="wrap">
+          <div class="topline">
+            <div class="brand">
+              <span class="mark" aria-hidden="true"></span>
+              Rekora
+            </div>
+            <nav class="doc-links" aria-label="Project documents">
+              <a href="../README.md">README</a>
+              <a href="../PROJECT_STATE.md">State</a>
+              <a href="../BACKUP_SCHEMA.md">Schema</a>
+              <a href="../FUNCTIONAL_MVP.md">MVP</a>
+            </nav>
+          </div>
+
+          <div class="hero-grid">
+            <div>
+              <p class="eyebrow">iPhone-first Apple Music backup</p>
+              <h1>Keep the map of your music.</h1>
+              <p class="lead">
+                Rekora is a local-first MVP for preserving the important
+                details of an Apple Music library: saved music, playlists,
+                playlist order, dates, and enough identifiers to rebuild what
+                Apple Music allows.
+              </p>
+              <div class="hero-actions">
+                <a class="button" href="../README.md">Read the source</a>
+                <a class="button secondary" href="../PROJECT_STATE.md">
+                  Check current build
+                </a>
+              </div>
+            </div>
+
+            <aside class="status-board" aria-label="Current project status">
+              <div class="board-head">
+                <span>Current checkpoint</span>
+                <span class="mono">schema v1</span>
+              </div>
+              <div class="board-body">
+                <div class="signal">
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>
+                    <strong>Permission flow exists</strong>
+                    Rekora can request Apple Music access and show the
+                    authorization state.
+                  </span>
+                </div>
+                <div class="signal">
+                  <span class="dot pending" aria-hidden="true"></span>
+                  <span>
+                    <strong>Playlist metadata fetch is validated</strong>
+                    The app checks subscription and Sync Library readiness
+                    before attempting a MusicKit playlist request. Real-device
+                    testing found the expected playlist count.
+                  </span>
+                </div>
+                <div class="signal">
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>
+                    <strong>Local backups work</strong>
+                    The app saves songs, albums, playlists, ordered playlist
+                    tracks, and a protected <code>latest-backup.json</code>
+                    manifest.
+                  </span>
+                </div>
+                <div class="signal">
+                  <span class="dot future" aria-hidden="true"></span>
+                  <span>
+                    <strong>Restore preview can prepare rebuilds</strong>
+                    Import validation, basic diffing, and read-only Apple
+                    Music match checking exist. A confirmation-gated
+                    one-playlist rebuild path has been validated on a physical
+                    iPhone with a disposable playlist.
+                  </span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="wrap">
+          <div class="section-head">
+            <h2>The problem is not audio. It is memory.</h2>
+            <p>
+              Apple Music is a listening service, not a personal backup
+              system. Rekora focuses on the library map: what a user saved, how
+              playlists were arranged, which identifiers were available, and
+              what changed over time.
+            </p>
+          </div>
+
+          <div class="proof-grid" aria-label="Product principles">
+            <article class="proof">
+              <b>01</b>
+              <h3>Local-first trust</h3>
+              <p>
+                Library data should stay on the user's device unless they
+                explicitly export it.
+              </p>
+            </article>
+            <article class="proof">
+              <b>02</b>
+              <h3>Portable snapshots</h3>
+              <p>
+                Backups use versioned JSON so the user owns a readable file,
+                independent of any future app database.
+              </p>
+            </article>
+            <article class="proof">
+              <b>03</b>
+              <h3>Playlist order matters</h3>
+              <p>
+                Ordered playlist entries are part of the backup contract, not
+                inferred from a global song list.
+              </p>
+            </article>
+            <article class="proof">
+              <b>04</b>
+              <h3>Honest recovery</h3>
+              <p>
+                Rekora should help rebuild as much as possible without
+                promising perfect restoration.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stripe">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>The intended backup loop</h2>
+            <p>
+              The MVP is deliberately small: request permission, read useful
+              MusicKit library data, save local snapshots, export user-owned
+              backups, compare changes, and rebuild supported playlists only
+              after a readable plan.
+            </p>
+          </div>
+
+          <div class="flow" aria-label="Backup workflow">
+            <article class="step">
+              <span class="step-num">1</span>
+              <h3>Ask permission</h3>
+              <p>Use MusicKit authorization with clear denial and restriction states.</p>
+            </article>
+            <article class="step">
+              <span class="step-num">2</span>
+              <h3>Read library data</h3>
+              <p>Fetch playlists, songs, albums, order, and useful identifiers.</p>
+            </article>
+            <article class="step">
+              <span class="step-num">3</span>
+              <h3>Save a snapshot</h3>
+              <p>Write a protected local backup and latest-backup manifest.</p>
+            </article>
+            <article class="step">
+              <span class="step-num">4</span>
+              <h3>Export and compare</h3>
+              <p>Let users take their file out of the app and inspect changes.</p>
+            </article>
+            <article class="step">
+              <span class="step-num">5</span>
+              <h3>Plan a rebuild</h3>
+              <p>Separate matched, missing, unavailable, and uncertain tracks.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Portable backup contract</p>
+            <h2>Schema v1 stores identifiers and fallbacks.</h2>
+            <p class="wide-copy">
+              The schema is not the app database. It is the exported and
+              imported backup format that should keep working even if local
+              indexing later moves to SwiftData or SQLite.
+            </p>
+          </div>
+
+          <article class="panel">
+            <div class="panel-title">
+              <span>Snapshot contents</span>
+              <span class="mono">JSON</span>
+            </div>
+            <div class="panel-content">
+              <ul class="schema-list">
+                <li>
+                  <span class="tag">metadata</span>
+                  <span>
+                    <code>schemaVersion</code>, <code>snapshotID</code>,
+                    <code>createdAt</code>, and source app/platform details.
+                  </span>
+                </li>
+                <li>
+                  <span class="tag">library items</span>
+                  <span>
+                    Saved songs, albums, and playlists with Apple identifiers
+                    where available.
+                  </span>
+                </li>
+                <li>
+                  <span class="tag">fallbacks</span>
+                  <span>
+                    Title, artist, album, duration, track number, and disc
+                    number for records that may later lose catalog matches.
+                  </span>
+                </li>
+                <li>
+                  <span class="tag">order</span>
+                  <span>
+                    Playlist entries keep <code>playlistID</code>,
+                    <code>songID</code>, MusicKit <code>position</code>,
+                    optional <code>snapshotOrder</code>, and optional
+                    <code>addedAt</code>.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="stripe">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>What exists today</h2>
+            <p>
+              The current app proves the core backup and one-playlist rebuild
+              path. Remaining MVP work is now mostly hardening, stress
+              validation, and final review.
+            </p>
+          </div>
+
+          <div class="truth-table">
+            <article class="truth">
+              <h3>Working now</h3>
+              <ul>
+                <li>SwiftUI iPhone app scaffold in <code>Rekora.xcodeproj</code>.</li>
+                <li>Apple Music permission request and status display.</li>
+                <li>Playlist readiness checks for subscription and Sync Library status.</li>
+                <li>Actionable MusicKit setup messages instead of bare unknown errors.</li>
+                <li>Real-device playlist metadata count validation.</li>
+                <li>Playlist count display without previewing personal playlist names.</li>
+                <li>Real song, album, playlist, and playlist-track backups in private app storage.</li>
+                <li>iOS file protection for snapshot and manifest files.</li>
+                <li><code>latest-backup.json</code> manifest loading on launch.</li>
+                <li>User-controlled backup export through the iOS Files flow.</li>
+                <li>Read-only backup import validation, snapshot change summary, and Restore preview.</li>
+                <li>Simulator-tested Apple Music match checking for Restore preview.</li>
+                <li>Confirmation-gated one-playlist rebuild that creates a new playlist only and skips metadata-only guesses.</li>
+                <li>Physical-iPhone smoke test proving a disposable playlist can be rebuilt without changing existing playlists.</li>
+              </ul>
+            </article>
+            <article class="truth">
+              <h3>Being validated</h3>
+              <ul>
+                <li>Large backup/export stress testing for issue <code>#19</code>.</li>
+                <li>Larger playlist rebuild stress testing for issue <code>#18</code>.</li>
+                <li>Expected-failure error handling for issue <code>#20</code>.</li>
+              </ul>
+            </article>
+            <article class="truth">
+              <h3>Polish and final gate</h3>
+              <ul>
+                <li>Final MVP validation pass for issue <code>#21</code>.</li>
+                <li>App icon and visual identity assets for issue <code>#11</code>.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap split">
+          <article class="panel">
+            <div class="panel-title">
+              <span>Current build command</span>
+              <span class="mono">Xcode</span>
+            </div>
+            <div class="panel-content">
+              <pre class="code-block"><code>DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer \
+xcodebuild -project Rekora.xcodeproj \
+  -scheme Rekora \
+  -configuration Debug \
+  -destination generic/platform=iOS \
+  -derivedDataPath /private/tmp/RekoraDerivedData \
+  CODE_SIGNING_ALLOWED=NO \
+  build-for-testing</code></pre>
+            </div>
+          </article>
+
+          <div>
+            <p class="eyebrow">Native first</p>
+            <h2>Built where the library lives.</h2>
+            <p class="wide-copy">
+              Rekora starts as an iPhone app with SwiftUI, MusicKit, versioned
+              JSON backups, and XCTest. A Mac app, web dashboard, payments,
+              accounts, cloud sync, and scheduled backups can wait until the
+              basic MusicKit flow is trustworthy.
+            </p>
+            <ul class="plain-list">
+              <li>
+                <span class="tag">Bundle ID</span>
+                <span><code>app.rekora.ios</code>, pending Apple Developer portal alignment.</span>
+              </li>
+              <li>
+                <span class="tag">Privacy</span>
+                <span>No external server storage is part of the MVP direction.</span>
+              </li>
+              <li>
+                <span class="tag">Limit</span>
+                <span>Rekora backs up the library map, not audio files.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="stripe">
+        <div class="wrap">
+          <div class="callout">
+            <div>
+              <h2>Functional completion is explicit.</h2>
+              <p>
+                Rekora is functionally complete only when a user can grant
+                access, create a real local backup, export it, inspect changes,
+                and rebuild at least supported playlists from that backup.
+              </p>
+            </div>
+            <a class="button secondary" href="../FUNCTIONAL_MVP.md">Open checklist</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>
+          Palette from Sanzo Wada colors: Dark Tyrian Blue, Seashell Pink,
+          Turquoise Green, and Hydrangea Red. Content synchronized with
+          <a href="../README.md">README.md</a>, with supporting context from
+          <a href="../PROJECT_STATE.md">PROJECT_STATE.md</a>,
+          <a href="../DEVELOPMENT.md">DEVELOPMENT.md</a>,
+          <a href="../PROBLEM.md">PROBLEM.md</a>,
+          <a href="../BACKUP_SCHEMA.md">BACKUP_SCHEMA.md</a>, and
+          <a href="../FUNCTIONAL_MVP.md">FUNCTIONAL_MVP.md</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

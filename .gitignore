@@ -1,0 +1,77 @@
+.DS_Store
+Thumbs.db
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+.claude/
+*.secret
+*.secrets
+secrets/
+private/
+credentials/
+tokens/
+*.token
+*.jwt
+*.p8
+*.pem
+*.key
+*.cer
+*.cert
+*.p12
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+
+# Logs
+*.log
+logs/
+
+# Local databases, exports, and user music data
+*.sqlite
+*.sqlite3
+*.db
+backups/
+exports/
+snapshots/
+library-data/
+music-library/
+apple-music-export/
+*.musiclibrary
+*.itl
+*.itdb
+*.xml
+*.m3u
+*.m3u8
+*.csv
+
+# Node / web tooling
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# Swift / Xcode
+.build/
+DerivedData/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.xcuserdatad
+*.xcuserstate
+xcuserdata/
+
+# Editor and temp files
+.idea/
+.vscode/settings.json
+.vscode/settings.local.json
+tmp/
+temp/
+
+# Internal AI handoff notes
+CLAUDE_CODE_UI_IMPLEMENTATION_PLAN.md
