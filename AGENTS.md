@@ -18,8 +18,6 @@ Update the relevant docs when meaningful project state changes:
 
 - `README.md`: project summary, stack, app target, MVP scope, and current build
   direction.
-- `PROJECT_STATE.md`: current handoff summary, latest validation results,
-  changed files, commands already run, next steps, and open risks.
 - `DEVELOPMENT.md`: deeper setup steps, Apple/Xcode/MusicKit requirements, and
   local development notes.
 - `PROBLEM.md`: the user problem, product promise, scope, and recovery limits.
@@ -87,8 +85,7 @@ Keep Xcode command-line setup project-specific.
   on Rekora build/test commands.
 - If build commands become repetitive, add project-local wrappers such as a
   `Makefile` or script that sets `DEVELOPER_DIR` internally.
-- Document any required project-local build wrappers in `PROJECT_STATE.md` and,
-  when they are durable setup details, in `DEVELOPMENT.md`.
+- Document any required project-local build wrappers in `DEVELOPMENT.md`.
 
 ## Before Final Response
 
